@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard>
+  <Title Text="Dashboard" />
+  <DataSources>
+    <OLAPDataSource ComponentName="DataSource1" Name="OLAP Data Source 1" ConnectionName="adventureWorksConnection" />
+  </DataSources>
+  <Items>
+    <Card ComponentName="cardDashboardItem1" Name="Sales by Date" DataSource="DataSource1">
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <DataItems>
+        <Measure DataMember="[Measures].[Sales Amount]" DefaultId="DataItem0">
+          <NumericFormat FormatType="Currency" IncludeGroupSeparator="true" />
+        </Measure>
+        <Dimension DataMember="[Date].[Calendar Year].[Calendar Year]" DefaultId="DataItem1" />
+        <Dimension DataMember="[Date].[Calendar Quarter of Year].[Calendar Quarter of Year]" DefaultId="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem1" />
+        <SeriesDimension DefaultId="DataItem2" />
+      </SeriesDimensions>
+      <Card>
+        <ActualValue DefaultId="DataItem0" />
+      </Card>
+    </Card>
+    <Chart ComponentName="chartDashboardItem1" Name="Sales by Country" DataSource="DataSource1">
+      <DataItems>
+        <Measure DataMember="[Measures].[Sales Amount]" DefaultId="DataItem0">
+          <NumericFormat FormatType="Currency" IncludeGroupSeparator="true" />
+        </Measure>
+        <Dimension DataMember="[Sales Territory].[Sales Territory Country].[Sales Territory Country]" DefaultId="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Pivot ComponentName="pivotDashboardItem1" Name="Pivot 1" ShowCaption="false" DataSource="DataSource1">
+      <DataItems>
+        <Measure DataMember="[Measures].[Sales Amount]" DefaultId="DataItem0">
+          <NumericFormat FormatType="Currency" IncludeGroupSeparator="true" />
+        </Measure>
+        <Dimension DataMember="[Sales Territory].[Sales Territory Country].[Sales Territory Country]" DefaultId="DataItem1" />
+        <Dimension DataMember="[Product].[Product Categories].[Category]" GroupIndex="10" DefaultId="DataItem2" />
+        <Dimension DataMember="[Product].[Product Categories].[Subcategory]" GroupIndex="10" DefaultId="DataItem3" />
+        <Dimension DataMember="[Product].[Product Categories].[Product]" GroupIndex="10" DefaultId="DataItem4" />
+      </DataItems>
+      <Columns>
+        <Column DefaultId="DataItem1" />
+      </Columns>
+      <Rows>
+        <Row DefaultId="DataItem2" />
+        <Row DefaultId="DataItem3" />
+        <Row DefaultId="DataItem4" />
+      </Rows>
+      <Values>
+        <Value DefaultId="DataItem0" />
+      </Values>
+      <AutoExpandRowGroups>true</AutoExpandRowGroups>
+    </Pivot>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="cardDashboardItem1" Weight="50.636413945766463" />
+      <LayoutGroup Orientation="Vertical" Weight="149.36358605423354">
+        <LayoutItem DashboardItem="chartDashboardItem1" Weight="150.82079177183582" />
+        <LayoutItem DashboardItem="pivotDashboardItem1" Weight="147.90638033663126" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>
