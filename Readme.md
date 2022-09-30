@@ -10,8 +10,11 @@
 **[[Run Online]](https://codecentral.devexpress.com/128579794/)**
 <!-- run online end -->
 
-The following example demonstrates how to apply master filtering in ASPxDashboard on the client side when the dashboard is connected to an OLAP cube.
-<p>In this example, the <a href="https://documentation.devexpress.com/#Dashboard/DevExpressDashboardWebScriptsASPxClientDashboard_SetMasterFiltertopic">ASPxClientDashboard.SetMasterFilter</a> method is used to select required cards in the Card dashboard item. This method is called in the <a href="https://js.devexpress.com/Documentation/ApiReference/UI_Widgets/dxButton/Configuration/#onClick">onClick</a> event handler of the dxButton.</p>
+The following example shows how to apply master filtering in ASPxDashboard on the client side when the dashboard is connected to an OLAP cube.
+
+In this example, the [ViewerApiExtension.setMasterFilter](https://docs.devexpress.com/Dashboard/js-DevExpress.Dashboard.ViewerApiExtension?p=netframework#js_devexpress_dashboard_viewerapiextension_setmasterfilter_itemname_values_) method call applies the Master Filter values to the Card dashboard item. 
+
+The [dxButton](https://js.devexpress.com/DevExtreme/ApiReference/UI_Components/dxButton/)'s `onClick` event handler calls this method.
 
 # Files to Review
 
