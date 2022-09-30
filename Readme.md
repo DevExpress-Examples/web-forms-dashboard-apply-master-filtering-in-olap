@@ -16,7 +16,7 @@ In this example, the [ViewerApiExtension.setMasterFilter](https://docs.devexpre
 
 The [dxButton](https://js.devexpress.com/DevExtreme/ApiReference/UI_Components/dxButton/)'s `onClick` event handler calls this method.
 
-# Files to Review
+## Files to Review
 
 * [Default.aspx](./CS/ASPxDashboard_SetMasterFilter_Olap/Default.aspx) (VB: [Default.aspx](./VB/ASPxDashboard_SetMasterFilter_Olap/Default.aspx))
 * [Default.aspx.cs](./CS/ASPxDashboard_SetMasterFilter_Olap/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/ASPxDashboard_SetMasterFilter_Olap/Default.aspx.vb))
@@ -29,4 +29,5 @@ The [dxButton](https://js.devexpress.com/DevExtreme/ApiReference/UI_Components/d
 
 ## More Examples
 
-- [Dashboard for Web Forms - How to: Apply Master Filter in Code](https://github.com/DevExpress-Examples/aspxdashboard-how-to-apply-master-filtering-in-code-t490897)
+- [Dashboard for Web Forms - How to Apply Master Filter on the Client](https://github.com/DevExpress-Examples/asp-net-web-forms-dashboard-apply-master-filter-in-code)
+- [Dashboard for MVC - How to Apply Master Filter on the Client](https://github.com/DevExpress-Examples/mvc-dashboard-apply-master-filtering-in-code)
