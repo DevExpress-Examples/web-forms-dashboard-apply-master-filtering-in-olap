@@ -14,7 +14,7 @@
 # Dashboard for Web Forms - How to apply Master Filtering in OLAP mode
 
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/t492463/)**
+**[[Run Online]](https://codecentral.devexpress.com/128579794/)**
 <!-- run online end -->
 
 The following example demonstrates how to apply master filtering in ASPxDashboard on the client side when the dashboard is connected to an OLAP cube.
